@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
   <title>Digital Wellness Extension</title>
   <link rel="stylesheet" href="style.css">
   <script src="popup.js"></script>
 </head>
 <body>
-  <!-- Your popup content goes here -->
-  <h1>Welcome to the Digital Wellness Extension!</h1>
-  <p>This is the popup window content.</p>
+  <h1>Digital Wellness Extension</h1>
+  <div id="eyeReminderContainer">
+    <h2>Eye Reminder</h2>
+    <button id="eyeReminderButton">Set Eye Reminder</button>
+  </div>
+  <div id="stretchBreakContainer">
+    <h2>Stretch Break</h2>
+    <button id="stretchBreakButton">Set Stretch Break</button>
+  </div>
+  <div id="moodTrackingContainer">
+    <h2>Mood Tracking</h2>
+    <select id="moodSelect">
+      <option value="happy">Happy</option>
+      <option value="sad">Sad</option>
+      <option value="excited">Excited</option>
+      <option value="angry">Angry</option>
+      <option value="stressed">Stressed</option>
+    </select>
+    <button id="trackMoodButton">Track Mood</button>
+  </div>
+  <script src="background.js"></script>
 </body>
 </html>
+
