@@ -10,7 +10,9 @@
     },
     "permissions": [
       "notifications",
-      "activeTab"
+      "activeTab",
+      "storage",
+      "alarms"
     ],
     "background": {
       "service_worker": "background.js"
@@ -29,6 +31,10 @@
         "matches": ["http://*/*", "https://*/*"],
         "js": ["content.js"]
       }
-    ]
+    ],
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": true
   }
+}
   
