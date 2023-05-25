@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
       
-      function startReminderTimer(reminderType, interval, timerDisplayId) {
+    /*  function startReminderTimer(reminderType, interval, timerDisplayId) {
         var timerDisplay = document.getElementById(timerDisplayId);
         var timerInterval = timerDisplay.timerInterval;
         if (timerInterval) {
@@ -83,4 +83,4 @@ document.addEventListener('DOMContentLoaded', function() {
         alert(message);
       }
       
-    });      
+    });      */
