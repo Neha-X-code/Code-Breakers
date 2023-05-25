@@ -9,11 +9,21 @@
   <h1>Digital Wellness Extension</h1>
   <div id="eyeReminderContainer">
     <h2>Eye Reminder</h2>
+    <input type="number" id="eyeInterval" placeholder="Enter minutes">
     <button id="eyeReminderButton">Set Eye Reminder</button>
+    <div id="eyeTimerDisplay"></div>
   </div>
-  <div id="stretchBreakContainer">
-    <h2>Stretch Break</h2>
-    <button id="stretchBreakButton">Set Stretch Break</button>
+  <div id="hydrationReminderContainer">
+    <h2>Hydration Reminder</h2>
+    <input type="number" id="hydrationInterval" placeholder="Enter minutes">
+    <button id="hydrationReminderButton">Set Hydration Reminder</button>
+    <div id="hydrationTimerDisplay"></div>
+  </div>
+  <div id="stretchReminderContainer">
+    <h2>Stretch Reminder</h2>
+    <input type="number" id="stretchInterval" placeholder="Enter hours">
+    <button id="stretchReminderButton">Set Stretch Reminder</button>
+    <div id="stretchTimerDisplay"></div>
   </div>
   <div id="moodTrackingContainer">
     <h2>Mood Tracking</h2>
@@ -26,7 +36,5 @@
     </select>
     <button id="trackMoodButton">Track Mood</button>
   </div>
-  <script src="background.js"></script>
 </body>
 </html>
-
