@@ -1,40 +1,24 @@
 {
-    "manifest_version": 3,
-    "name": "Digital Wellness Extension",
-    "version": "1.0",
-    "description": "A Chrome extension for promoting digital wellness",
-    "icons": {
-      "16": "icons/icon16.png",
-      "48": "icons/icon48.png",
-      "128": "icons/icon128.png"
-    },
-    "permissions": [
-      "notifications",
-      "activeTab",
-      "storage",
-      "alarms"
-    ],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "icons/icon16.png",
-        "48": "icons/icon48.png",
-        "128": "icons/icon128.png"
-      },
-      "css": ["style.css"]
-    },
-    "content_scripts": [
-      {
-        "matches": ["http://*/*", "https://*/*"],
-        "js": ["content.js"]
-      }
-    ],
-    "options_ui": {
-        "page": "options.html",
-        "open_in_tab": true
-  }
+  "manifest_version": 3,
+  "name": "Healthy Browsing",
+  "version": "1.1",
+  "background": {
+     "service_worker": "background.js"
+  },
+  "action": {
+     "default_popup": "index.html",
+     "default_icon": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+     },
+     "default_title": "Healthy Browsing"
+  },
+  "icons": {
+     "16": "images/icon16.png",
+     "48": "images/icon48.png",
+     "128": "images/icon128.png"
+  },
+  "description": "Reminders to drink water, blink, correct your posture and stretch for a healthier browsing.",
+  "permissions": [ "notifications", "storage" ]
 }
-  
