@@ -12,17 +12,14 @@ chrome.alarms.onAlarm.addListener(
         )
     },
 )
-chrome.runtime.onMessage.addListener(
-    function (request, sender, sendResponse) {
-        console.log(request);
-        if (request.time)
-            createAlarm();
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+    console.log(request);
+    if (request.time)
+        createAlarm();
 
-        sendResponse(() => {
-            return false
-        });
-    }
-);
+    sendResponse({ success: false }); // Changed to an object instead of a function
+});
+
 
 function createAlarm() {
     chrome.alarms.create(
