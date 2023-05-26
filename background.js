@@ -1,26 +1,35 @@
+chrome.alarms.onAlarm.addListener(
+    () => {
+        chrome.notifications.create(
+            // "drink_water",
+            {
+                type: "basic",
+                iconUrl: "icon128.png",
+                title: "Stay Hydrated",
+                message: "Have a sip of water human!"
+            },
+            () => { }
+        )
+    },
+)
+chrome.runtime.onMessage.addListener(
+    function (request, sender, sendResponse) {
+        console.log(request);
+        if (request.time)
+            createAlarm();
 
-//================================================================================
-// Execute code in background
-//================================================================================
-function notificationDispatcher() {
-  // Placeholder implementation for demonstration purposes
-  console.log("Notification dispatched");
+        sendResponse(() => {
+            return false
+        });
+    }
+);
+
+function createAlarm() {
+    chrome.alarms.create(
+        "drink_water",
+        {
+            delayInMinutes: 1,
+            periodInMinutes: 1
+        }
+    );
 }
-
-function refreshScheduler() {
-  // Placeholder implementation for demonstration purposes
-  console.log("Scheduler refreshed");
-}
-
-function receiveMessage(message, sender, sendResponse) {
-  // Placeholder implementation for demonstration purposes
-  console.log("Message received", message);
-}
-
-var notificationDispatcherInterval = 5000; // Interval in milliseconds
-setInterval(notificationDispatcher, notificationDispatcherInterval);
-refreshScheduler();
-
-chrome.runtime.onInstalled.addListener(refreshScheduler);
-chrome.runtime.onStartup.addListener(refreshScheduler);
-chrome.runtime.onMessage.addListener(receiveMessage);

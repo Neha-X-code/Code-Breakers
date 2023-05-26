@@ -1,24 +1,17 @@
 {
-  "manifest_version": 3,
-  "name": "Healthy Browsing",
-  "version": "1.1",
-  "background": {
-     "service_worker": "background.js"
-  },
-  "action": {
-     "default_popup": "index.html",
-     "default_icon": {
-        "16": "images/icon16.png",
-        "48": "images/icon48.png",
-        "128": "images/icon128.png"
-     },
-     "default_title": "Healthy Browsing"
-  },
-  "icons": {
-     "16": "images/icon16.png",
-     "48": "images/icon48.png",
-     "128": "images/icon128.png"
-  },
-  "description": "Reminders to drink water, blink, correct your posture and stretch for a healthier browsing.",
-  "permissions": [ "notifications", "storage" ]
+    "name": "Drink Water",
+    "description": "Build an Extension!",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "notifications",
+        "storage",
+        "alarms"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
 }
