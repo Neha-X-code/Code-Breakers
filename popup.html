@@ -4,22 +4,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Timer</title>
+  <title>Reminder</title>
   <script src="popup.js"></script>
 </head>
 <body>
-  <h2>Water Reminder</h2>
-  <label for="waterHours">Hours:</label>
-  <input type="number" id="waterHours" min="0" value="0">
-  <label for="waterMinutes">Minutes:</label>
-  <input type="number" id="waterMinutes" min="1" value="1">
-  <button id="waterBtn">Set Water Reminder</button>
-
-  <h2>Eye Rest Reminder</h2>
-  <label for="eyeHours">Hours:</label>
-  <input type="number" id="eyeHours" min="0" value="0">
-  <label for="eyeMinutes">Minutes:</label>
-  <input type="number" id="eyeMinutes" min="1" value="1">
-  <button id="eyeBtn">Set Eye Rest Reminder</button>
+  <h1>Reminder Settings</h1>
+  <div>
+    <label for="waterHours">Water Reminder (hours):</label>
+    <input type="number" id="waterHours" min="0">
+    <label for="waterMinutes">Water Reminder (minutes):</label>
+    <input type="number" id="waterMinutes" min="0">
+    <button id="waterBtn">Set Water Reminder</button>
+  </div>
+  <div>
+    <label for="eyeHours">Eye Rest Reminder (hours):</label>
+    <input type="number" id="eyeHours" min="0">
+    <label for="eyeMinutes">Eye Rest Reminder (minutes):</label>
+    <input type="number" id="eyeMinutes" min="0">
+    <button id="eyeBtn">Set Eye Rest Reminder</button>
+  </div>
+  <div>
+    <label for="stretchHours">Stretch Reminder (hours):</label>
+    <input type="number" id="stretchHours" min="0">
+    <label for="stretchMinutes">Stretch Reminder (minutes):</label>
+    <input type="number" id="stretchMinutes" min="0">
+    <button id="stretchBtn">Set Stretch Reminder</button>
+  </div>
 </body>
 </html>
