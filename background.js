@@ -1,22 +1,12 @@
 chrome.alarms.onAlarm.addListener(function(alarm) {
-  var reminderName = alarm.name.split("_")[0];
-  var message = "";
-
-  if (reminderName === "Water") {
-    message = "Have a sip of water, human!";
-  } else if (reminderName === "Eye") {
-    message = "Rest your eyes for a while!";
-  } else if (reminderName === "Stretch") {
-    message = "Time to stretch your body!";
-  }
-
   chrome.notifications.create({
     type: "basic",
     iconUrl: "icon128.png",
-    title: reminderName + " Reminder",
-    message: message
+    title: "Reminder",
+    message: "It's time for " + alarm.name + "!"
   });
 });
+
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   console.log(request);
