@@ -1,31 +1,37 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var btn = document.getElementById("btn");
-    btn.addEventListener("click", function() {
-      var hoursInput = document.getElementById("hours");
-      var minutesInput = document.getElementById("minutes");
-      var hoursValue = parseInt(hoursInput.value);
-      var minutesValue = parseInt(minutesInput.value);
-  
-      // Validation for minutes input
-      if (isNaN(minutesValue) || minutesValue < 0 || minutesValue >= 60) {
-        alert("Please enter a valid value for minutes (0-59).");
-        return;
-      }
-  
-      // Calculate the total time in minutes
-      var totalMinutes = hoursValue * 60 + minutesValue;
-      if (totalMinutes <= 0) {
-        alert("Please enter a valid timer value (greater than 0).");
-        return;
-      }
-  
-      chrome.runtime.sendMessage({ time: totalMinutes }, function(response) {
-        if (response.success) {
-          alert("Alarm set successfully!");
-        } else {
-          alert("Failed to set the alarm.");
-        }
-      });
-    });
+  var waterBtn = document.getElementById("waterBtn");
+  waterBtn.addEventListener("click", function() {
+    var waterHoursInput = document.getElementById("waterHours");
+    var waterMinutesInput = document.getElementById("waterMinutes");
+    var waterHoursValue = parseInt(waterHoursInput.value) || 0;
+    var waterMinutesValue = parseInt(waterMinutesInput.value) || 1;
+    setReminder("Water Reminder", "Have a sip of water, human!", waterHoursValue, waterMinutesValue);
   });
-  
+
+  var eyeBtn = document.getElementById("eyeBtn");
+  eyeBtn.addEventListener("click", function() {
+    var eyeHoursInput = document.getElementById("eyeHours");
+    var eyeMinutesInput = document.getElementById("eyeMinutes");
+    var eyeHoursValue = parseInt(eyeHoursInput.value) || 0;
+    var eyeMinutesValue = parseInt(eyeMinutesInput.value) || 1;
+    setReminder("Eye Rest Reminder", "Take a break and rest your eyes.", eyeHoursValue, eyeMinutesValue);
+  });
+
+  function setReminder(title, message, hours, minutes) {
+    if (isNaN(hours) || hours < 0 || isNaN(minutes) || minutes <= 0) {
+      alert("Please enter valid values for hours and minutes.");
+      return;
+    }
+
+    var totalMinutes = hours * 60 + minutes;
+    var delayInMinutes = totalMinutes;
+    var periodInMinutes = totalMinutes;
+
+    chrome.alarms.create(title, {
+      delayInMinutes: delayInMinutes,
+      periodInMinutes: periodInMinutes
+    });
+
+    alert("Reminder set successfully!");
+  }
+});
