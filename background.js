@@ -4,7 +4,7 @@ chrome.alarms.onAlarm.addListener(function(alarm) {
       type: "basic",
       iconUrl: "icon1281.png",
       title: "Reminder",
-      message: "It's time for " + alarm.name + "!" + alarm +"..."
+      message: "It's time for " + alarm.name + "!"
   });}
   else if (alarm=="eye rest"){
     chrome.notifications.create({
