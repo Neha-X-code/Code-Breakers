@@ -6,14 +6,14 @@ chrome.alarms.onAlarm.addListener(function(alarm) {
       title: "Reminder",
       message: "It's time for " + alarm.name + "!"
   });}
-  if (alarm.name=="eye rest_remainder"){
+  else if (alarm.name=="eye rest_remainder"){
     chrome.notifications.create({
       type: "basic",
       iconUrl: "icon1282.png",
       title: "Reminder",
       message: "It's time for " + alarm.name + "!"
   });}
-  if (alarm.name=="stretch_remainder"){
+  else {
     chrome.notifications.create({
       type: "basic",
       iconUrl: "icon1283.png",
