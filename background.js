@@ -1,7 +1,7 @@
 chrome.alarms.onAlarm.addListener(function(alarm) {
     chrome.notifications.create({
       type: "basic",
-      iconUrl: "cb.jpg",
+      iconUrl: "cb128.jpg",
       title: "Reminder",
       message: "It's time for " + alarm.name + "!"
   });
