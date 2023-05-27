@@ -12,6 +12,11 @@
         "alarms"
     ],
     "action": {
-        "default_popup": "popup.html"
+        "default_popup": "popup.html",
+        "default_icon": {
+        "16": "icons/cb16.png",
+        "48": "icons/cb48.png",
+        "128": "icons/cb128.png"
+      }
     }
 }
