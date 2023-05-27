@@ -18,7 +18,7 @@ chrome.alarms.onAlarm.addListener(function(alarm) {
       type: "basic",
       iconUrl: "icon1283.png",
       title: "Reminder",
-      message: "It's time for " + alarm.name + "!"
+      message: "It's time for " + alarm.name + "!" + alarm
   });}
 });
 
