@@ -1,12 +1,26 @@
 chrome.alarms.onAlarm.addListener(function(alarm) {
-  chrome.notifications.create({
-    type: "basic",
-    iconUrl: "icon128.png",
-    title: "Reminder",
-    message: "It's time for " + alarm.name + "!"
-  });
+  if (alarm.name=="water_remainder"){
+    chrome.notifications.create({
+      type: "basic",
+      iconUrl: "icon1281.png",
+      title: "Reminder",
+      message: "It's time for " + alarm.name + "!"
+  });}
+  if (alarm.name=="eye rest_remainder"){
+    chrome.notifications.create({
+      type: "basic",
+      iconUrl: "icon1282.png",
+      title: "Reminder",
+      message: "It's time for " + alarm.name + "!"
+  });}
+  if (alarm.name=="stretch_remainder"){
+    chrome.notifications.create({
+      type: "basic",
+      iconUrl: "icon1283.png",
+      title: "Reminder",
+      message: "It's time for " + alarm.name + "!"
+  });}
 });
-
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   console.log(request);
