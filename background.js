@@ -1,12 +1,12 @@
 chrome.alarms.onAlarm.addListener(function(alarm) {
-  if (alarm="water"){
+  if (alarm.name=="water_remainder"){
     chrome.notifications.create({
       type: "basic",
       iconUrl: "icon1281.png",
       title: "Reminder",
       message: "It's time for " + alarm.name + "!"
   });}
-  else if (alarm=="eye rest"){
+  else if (alarm.name=="eye rest-remainder"){
     chrome.notifications.create({
       type: "basic",
       iconUrl: "icon1282.png",
