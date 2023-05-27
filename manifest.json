@@ -14,9 +14,9 @@
     "action": {
         "default_popup": "popup.html",
         "default_icon": {
-        "16": "icons/cb16.jpg",
-        "48": "icons/cb48.jpg",
-        "128": "icons/cb128.jpg"
+        "16": "cb16.jpg",
+        "48": "cb48.jpg",
+        "128": "cb128.jpg"
       }
     }
 }
