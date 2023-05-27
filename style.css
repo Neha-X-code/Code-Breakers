@@ -1,0 +1,137 @@
+
+h1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: beige;
+    text-align: center;
+}
+.wtr{
+   /*background-color: rgb(198, 154, 168);*/
+   background-image: url(water2.jpg);
+   background-size: cover;
+    padding: 20px;
+    border: 30px;
+    font-family: cursive;
+    font-weight:900;
+}
+#waterBtn{
+    font-family: cursive;
+    width: 150px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: 10px;
+    background-color: rgb(84, 82, 47);
+    opacity: 80%;
+  color: wheat;
+  padding: 10px 20px;
+  border: 5px;
+  cursor:pointer;
+  border: 2px solid #191c19;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(181, 20, 20, 0.2);
+}
+
+.eyes{
+    
+   /* background-color:darksalmon;*/
+    background-image: url(pineye.jpg);
+    background-size: cover;
+   padding: 20px;
+   border: 30px;
+   font-family: cursive;
+   font-weight:900;
+
+}
+#eyeBtn{
+    font-family: cursive;
+    font-weight:900;
+    width: 150px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: 10px;
+    background-color: rgb(84, 82, 47);
+    opacity: 80%;
+  color: wheat;
+  padding: 10px 20px;
+  border: 5px;
+  cursor:pointer;
+  border: 2px solid #191c19;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(181, 20, 20, 0.2);
+}
+.srth{
+  /*  background-color:rgb(148, 109, 96);*/
+  background-image: url(stretch2.jpg);
+  background-size: cover;
+   padding: 20px;
+   border: 30px;
+   font-family: cursive;
+   font-weight: 900;
+}
+
+#stretchBtn{
+    font-family: cursive;
+    font-weight:900;
+    width: 150px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: 10px;
+    background-color: rgb(84, 82, 47);
+    opacity: 80%;
+  color: wheat;
+  padding: 10px 20px;
+  border: 5px;
+  cursor:pointer;
+  border: 2px solid #191c19;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(181, 20, 20, 0.2);
+}
+body{
+    background-color: #191c19;
+}
+
+#waterHours{
+    background-color: rgb(55, 52, 52);
+    opacity:60%; 
+    color: rgb(10, 10, 10);
+    background-color:white;
+
+}
+
+
+#waterMinutes{
+
+    background-color: rgb(55, 52, 52);
+    opacity:60%; 
+    color: rgb(10, 10, 10);
+    background-color:white;
+}
+
+#eyeHours{
+    background-color: rgb(55, 52, 52);
+    opacity:60%; 
+    color: rgb(10, 10, 10);
+    background-color:white;
+}
+#eyeMinutes{
+    background-color: rgb(55, 52, 52);
+    opacity:60%; 
+    color: rgb(10, 10, 10);
+    background-color:white;
+}
+
+
+#stretchHours{
+    background-color: rgb(55, 52, 52);
+    opacity:60%; 
+    color: rgb(10, 10, 10);
+    background-color:white;
+}
+
+
+#stretchMinutes{
+    background-color: rgb(55, 52, 52);
+    opacity:60%; 
+    color: rgb(10, 10, 10);
+    background-color:white;
+
+}
